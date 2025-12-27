@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Joshi | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo mono">YJ</a>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#toolbox">Skills</a>
+        <a href="#experience">Timeline</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="btn-small download-resume" download target="_blank" rel="noopener">Resume ⬇</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <!-- Content populated by script.js -->
+      </h1>
+      <p class="hero-description">
+        <!-- Content populated by script.js -->
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ME SECTION ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-content fade-in-up">
+        <div class="about-text">
+          <p class="about-bio">
+            <!-- Populated by script.js -->
+          </p>
+
+          <div class="about-columns">
+            <div class="about-interests">
+              <h4>What I'm Into</h4>
+              <ul class="interests-list">
+                <!-- Populated by script.js -->
+              </ul>
+            </div>
+
+            <div class="about-fun-facts">
+              <h4>Fun Facts</h4>
+              <ul class="fun-facts-list">
+                <!-- Populated by script.js -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS GALLERY ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Project Portfolio</h2>
+      </div>
+
+      <div class="grid grid-cols-3">
+
+        <!-- Lead Project: Formula SAE Suspension -->
+        <div class="project-card fade-in-up" data-project="lead">
+          <img src="images/project-lead.jpg" alt="Formula SAE Suspension Assembly" class="project-image">
+          <div class="project-content">
+            <span class="project-tag">Lead Project</span>
+            <h3 class="project-title">Formula SAE Suspension System</h3>
+            <p class="project-description">
+              Complete double-wishbone suspension design optimized for performance and weight. Includes kinematic
+              analysis, FEA validation, and fabrication drawings.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">SolidWorks</span>
+              <span class="tech-badge">ANSYS</span>
+              <span class="tech-badge">MATLAB</span>
+              <span class="tech-badge">GD&T</span>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('lead')">Deep Dive</button>
+          </div>
+        </div>
+
+        <!-- DFM Project: CNC Machined Enclosure -->
+        <div class="project-card fade-in-up" data-project="dfm">
+          <img src="images/project-dfm.jpg" alt="CNC Machined Aluminum Enclosure" class="project-image">
+          <div class="project-content">
+            <span class="project-tag">Design for Manufacturing</span>
+            <h3 class="project-title">Multi-Axis CNC Enclosure</h3>
+            <p class="project-description">
+              Custom aluminum enclosure designed with DFM principles. Optimized toolpaths reduced machining time by 35%
+              while maintaining tight tolerances (±0.001").
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Fusion 360</span>
+              <span class="tech-badge">Mastercam</span>
+              <span class="tech-badge">Manual Mill</span>
+              <span class="tech-badge">CMM Inspection</span>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('dfm')">Deep Dive</button>
+          </div>
+        </div>
+
+        <!-- FEA Project: Structural Analysis -->
+        <div class="project-card fade-in-up" data-project="fea">
+          <img src="images/project-fea.jpg" alt="FEA Stress Analysis Results" class="project-image">
+          <div class="project-content">
+            <span class="project-tag">FEA / Simulation</span>
+            <h3 class="project-title">Pressure Vessel Optimization</h3>
+            <p class="project-description">
+              Nonlinear FEA study of composite pressure vessel under cyclic loading. Achieved 22% weight reduction while
+              maintaining 2.5 safety factor under ASME standards.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">ANSYS Workbench</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Composite Materials</span>
+              <span class="tech-badge">ASME Code</span>
+            </div>
+            <button class="btn btn-primary" onclick="openModal('fea')">Deep Dive</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Miscellaneous Projects Gallery -->
+      <div class="misc-projects-section fade-in-up">
+        <h3 class="misc-projects-title">Bite-Sized Builds</h3>
+        <div class="misc-projects-grid">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== TOOLBOX SECTION ========== -->
+  <section class="section" id="toolbox">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">The Toolbox</h2>
+      </div>
+
+      <div class="toolbox-grid fade-in-up">
+        <div class="tool-item">
+          <div class="tool-icon">🔧</div>
+          <div class="tool-name">SolidWorks</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">⚙️</div>
+          <div class="tool-name">Fusion 360</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">📐</div>
+          <div class="tool-name">ANSYS</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">📊</div>
+          <div class="tool-name">MATLAB</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🐍</div>
+          <div class="tool-name">Python</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">📏</div>
+          <div class="tool-name">GD&T</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🔩</div>
+          <div class="tool-name">Manual Lathe</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">⚡</div>
+          <div class="tool-name">CNC Mill</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🖨️</div>
+          <div class="tool-name">3D Printing</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🔬</div>
+          <div class="tool-name">CFD Analysis</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">📝</div>
+          <div class="tool-name">Technical Writing</div>
+        </div>
+        <div class="tool-item">
+          <div class="tool-icon">🎯</div>
+          <div class="tool-name">Project Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMELINE CHART ========== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 class="section-title">Timeline</h2>
+      </div>
+
+      <div class="timeline-chart fade-in-up">
+        <!-- Chart will be populated by script.js -->
+        <div class="chart-container">
+          <div class="chart-labels">
+            <!-- Y-axis labels (item names) -->
+          </div>
+          <div class="chart-area">
+            <div class="chart-grid">
+              <!-- Grid lines and year labels -->
+            </div>
+            <div class="chart-bars">
+              <!-- Horizontal bars -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT / FOOTER ========== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+
+        <div class="footer-section">
+          <h3>Get In Touch</h3>
+          <p>Currently seeking co-op or internship opportunities for Summer 2026.</p>
+          <br>
+          <div class="contact-buttons">
+            <a href="mailto:yashnjoshi1@gmail.com" class="btn btn-primary btn-square">Email</a>
+            <a href="https://linkedin.com/in/yashnjoshi1" target="_blank" rel="noopener"
+              class="btn btn-primary btn-square" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Download Resume</h3>
+          <p>View my complete experience, coursework, and technical skills.</p>
+          <br>
+          <a href="#" class="btn btn-outline" download target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+        <p class="mono">&copy; <span id="year"></span> Alex Chen.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODALS ========== -->
+  <div id="modal-lead" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('lead')" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h2>Formula SAE Suspension System</h2>
+        <img src="images/project-lead.jpg" alt="Suspension Assembly Detail"
+          style="width: 100%; margin: 20px 0; border-radius: 4px;">
+        <h3>Project Overview</h3>
+        <p>
+          Designed a high-performance double-wishbone suspension system for MIT's Formula SAE vehicle. The project
+          encompassed complete lifecycle development from initial concept through fabrication and track validation.
+        </p>
+        <h3>Technical Highlights</h3>
+        <ul style="line-height: 2; color: var(--silver-300); margin: 20px 0;">
+          <li><strong>Kinematic Optimization:</strong> MATLAB simulation achieving 0.5° camber change through 3" of
+            travel</li>
+          <li><strong>Structural Validation:</strong> FEA analysis showing max von Mises stress of 45 ksi under 3g
+            loading (SF=2.2)</li>
+          <li><strong>Weight Reduction:</strong> 18% lighter than previous design through topology optimization and
+            material selection</li>
+          <li><strong>Manufacturing:</strong> Produced fabrication drawings with complete GD&T callouts per ASME Y14.5
+          </li>
+        </ul>
+        <h3>Results</h3>
+        <p>
+          The suspension system contributed to a 2nd place finish at the 2024 Formula SAE Michigan competition. Improved
+          handling metrics and reduced lap times by 1.8 seconds on the autocross course.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-dfm" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('dfm')" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h2>Multi-Axis CNC Enclosure</h2>
+        <img src="images/project-dfm.jpg" alt="CNC Enclosure Details"
+          style="width: 100%; margin: 20px 0; border-radius: 4px;">
+        <h3>Project Overview</h3>
+        <p>
+          Custom aluminum enclosure designed for a high-precision sensor assembly. The project emphasized Design for
+          Manufacturing principles to optimize both cost and quality.
+        </p>
+        <h3>Technical Highlights</h3>
+        <ul style="line-height: 2; color: var(--silver-300); margin: 20px 0;">
+          <li><strong>DFM Optimization:</strong> Redesigned features to eliminate unnecessary setups, reducing machining
+            time by 35%</li>
+          <li><strong>Tolerance Analysis:</strong> Statistical tolerance stack-up ensuring critical dimensions held
+            ±0.001"</li>
+          <li><strong>Toolpath Efficiency:</strong> Generated optimized CAM toolpaths in Mastercam with strategic use of
+            high-speed machining strategies</li>
+          <li><strong>Quality Control:</strong> Performed CMM inspection on all critical features, achieving Cpk > 1.67
+          </li>
+        </ul>
+        <h3>Results</h3>
+        <p>
+          Successfully manufactured 15 units with zero defects. Process improvements documented in technical report and
+          adopted as standard practice for future enclosure designs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-fea" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('fea')" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h2>Pressure Vessel Optimization</h2>
+        <img src="images/project-fea.jpg" alt="FEA Stress Analysis"
+          style="width: 100%; margin: 20px 0; border-radius: 4px;">
+        <h3>Project Overview</h3>
+        <p>
+          Nonlinear finite element analysis of a composite pressure vessel subjected to cyclic internal pressure.
+          Objective was to reduce weight while maintaining structural integrity per ASME Section VIII standards.
+        </p>
+        <h3>Technical Highlights</h3>
+        <ul style="line-height: 2; color: var(--silver-300); margin: 20px 0;">
+          <li><strong>Material Model:</strong> Implemented progressive damage models for carbon fiber/epoxy laminate
+          </li>
+          <li><strong>Loading Conditions:</strong> Applied 0-200 psi cyclic pressure with fatigue life prediction using
+            S-N curves</li>
+          <li><strong>Mesh Convergence:</strong> Refined mesh to 250K elements, achieving <2% stress variation on
+              sequential refinements</li>
+          <li><strong>Optimization:</strong> Python scripting automated 50+ design iterations, converging on optimal ply
+            layup</li>
+        </ul>
+        <h3>Results</h3>
+        <p>
+          Final design achieved 22% weight reduction compared to baseline aluminum vessel. All stress concentrations
+          remained below material allowables with minimum safety factor of 2.5. Results validated through burst testing
+          at external lab.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Configuration -->
+  <script src="config.js"></script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
