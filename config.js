@@ -88,7 +88,7 @@ const portfolioConfig = {
             ],
             technologies: ["Siemens NX", "GD&T", "ASME Standards"],
 
-            overview: "Worked with various custom and pre-made CAD models to put together a unique and thoroughly designed air engine with the proper fits and tolerancing to function efficiently if manufactured.",
+            overview: "Worked with various custom and imported CAD models to put together a unique and thoroughly designed air engine with the proper fits and tolerancing to function efficiently if manufactured.",
             highlights: [
                 { title: "Planning", description: "Generated the initial idea and logistics of modeling and drawing to make the process more efficient" },
                 { title: "Modeling", description: "Used a top-down modeling approach to ensure clarity and functionality with interchangeable parts" },
