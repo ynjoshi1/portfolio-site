@@ -366,10 +366,8 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  /* Centered positioning to prevent clipping on resize */
-  transform: scale(1.1);
-  /* Slight zoom to fill frame without edge clipping */
+  object-position: center 20%;
+  /* Position face slightly from top */
   display: block;
 }
 
@@ -1392,13 +1390,8 @@ p {
   object-fit: cover;
 }
 
-.hero-profile-wrapper {
-  /* Responsive profile photo sizing */
-  width: min(180px, 35vw);
-  height: min(180px, 35vw);
-  width: min(180px, 35svw);
-  height: min(180px, 35svw);
-}
+/* Profile wrapper - keep fixed aspect ratio to prevent clipping */
+/* Remove viewport-based sizing to prevent circle distortion */
 
 /* ----- RESPONSIVE IMAGES GLOBAL ----- */
 img {
@@ -1453,10 +1446,8 @@ img {
   }
 
   .hero-profile-wrapper {
-    width: min(140px, 40vw);
-    height: min(140px, 40vw);
-    width: min(140px, 40svw);
-    height: min(140px, 40svw);
+    width: 140px;
+    height: 140px;
   }
 
   /* Project Cards Mobile Flexbox */

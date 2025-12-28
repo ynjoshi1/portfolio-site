@@ -406,8 +406,19 @@ function populateTimelineChart(chartConfig) {
 
     // Helper function to create a bar element
     const createBar = (item) => {
-        const barStart = ((item.yearStart - startYear) / yearCount) * 100;
-        const barWidth = ((item.yearEnd - item.yearStart) / yearCount) * 100;
+        // Calculate positions accounting for space-between distribution
+        // Year labels are distributed at: 0%, 1/(n-1)*100%, 2/(n-1)*100%, etc.
+        // where n is the total number of year labels (yearCount + 1)
+        const numYearLabels = yearCount + 1;
+        const yearLabelSpacing = 100 / (numYearLabels - 1); // Percentage between each year label
+
+        // Calculate bar position: find the percentage for the start year
+        const startIndex = item.yearStart - startYear;
+        const endIndex = item.yearEnd - startYear;
+
+        const barStart = startIndex * yearLabelSpacing;
+        const barEnd = endIndex * yearLabelSpacing;
+        const barWidth = barEnd - barStart;
 
         const bar = document.createElement('div');
         bar.className = `chart-bar ${item.category || 'project'}`;
