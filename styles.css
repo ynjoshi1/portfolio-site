@@ -1471,10 +1471,8 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    height: auto;
-    max-height: 35vh;
-    max-height: 35svh;
-    min-height: 180px;
+    height: 200px;
+    /* Consistent fixed height on small mobile */
   }
 
   .project-content {
@@ -1606,10 +1604,8 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    height: auto;
-    max-height: 40vh;
-    max-height: 40svh;
-    min-height: 220px;
+    height: 220px;
+    /* Consistent fixed height on medium mobile */
   }
 
   /* Misc Projects - 2 column on medium */
@@ -1644,8 +1640,7 @@ img:not(.hero-profile-photo) {
 @media (min-width: 769px) and (max-width: 1024px) {
   .project-image {
     height: 250px;
-    max-height: 35vh;
-    max-height: 35svh;
+    /* Consistent fixed height on tablet */
   }
 
   /* Projects Grid - 2 columns */
@@ -1688,8 +1683,8 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    max-height: 50vh;
-    max-height: 50svh;
+    height: 200px;
+    /* Consistent fixed height in landscape */
   }
 }
 
