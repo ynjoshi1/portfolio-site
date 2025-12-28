@@ -972,11 +972,14 @@ p {
   }
 
   .chart-area {
-    overflow-x: scroll;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
+  /* Ensure years and bars have same width for alignment */
+  .chart-grid,
   .chart-bars {
-    min-width: 400px;
+    min-width: 500px;
   }
 
   /* Fix bar labels on mobile */
@@ -1394,7 +1397,8 @@ p {
 /* Remove viewport-based sizing to prevent circle distortion */
 
 /* ----- RESPONSIVE IMAGES GLOBAL ----- */
-img {
+/* Exclude profile photo which needs fixed height for circular display */
+img:not(.hero-profile-photo) {
   max-width: 100%;
   height: auto;
 }
