@@ -73,7 +73,7 @@ const portfolioConfig = {
             overview: "The focus of this project is high efficiency and ease of assembly, meaning a large part of the design process was calculating the optimal gear ratios and testing numerous configurations before finalizing a layout.",
             highlights: [
                 { title: "Initial Calculations", description: "Began by understanding our constraints and requirements before finding optimal values for performance" },
-                { title: "Design", description: "Used the determined 1.6:1 gear ratio and 3\" x 2\" box tube to create an initial design in Solidworks" },
+                { title: "Design", description: "Used the determined 1.6:1 gear ratio and 2\" x 3\" box tube to create an initial design in Solidworks" },
                 { title: "Communication", description: "Put together a guide for gear box assembly to ensure fellow teammates are informed and validate the design before manufacturing" },
                 { title: "Next Steps", description: "Prepare for critical design review followed by manufacturing and final testing" }
             ]

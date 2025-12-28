@@ -1335,3 +1335,386 @@ p {
     padding: var(--spacing-lg);
   }
 }
+
+/* ========================================
+   ENHANCED MOBILE RESPONSIVE STYLES
+   Flexbox Layouts & Viewport-Based Scaling
+   ======================================== */
+
+/* ----- FLEXBOX LAYOUT UTILITIES ----- */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- VIEWPORT-BASED IMAGE SCALING ----- */
+/* Using svh/svw with vh/vw fallbacks for broad compatibility */
+.project-image,
+.misc-project-image {
+  /* Fallback for browsers without svh/svw support */
+  max-height: 40vh;
+  /* Modern small viewport units for mobile browsers */
+  max-height: 40svh;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-profile-wrapper {
+  /* Responsive profile photo sizing */
+  width: min(180px, 35vw);
+  height: min(180px, 35vw);
+  width: min(180px, 35svw);
+  height: min(180px, 35svw);
+}
+
+/* ----- RESPONSIVE IMAGES GLOBAL ----- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- SMALL MOBILE (480px and below) ----- */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Hero Section Mobile Flexbox */
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    /* Small viewport height for mobile browser chrome */
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-title .mono {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-size: clamp(2rem, 10svw, 3.5rem);
+    word-spacing: normal;
+  }
+
+  .hero-role-block {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tagline-large {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    font-size: clamp(1.5rem, 8svw, 2.5rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hero-profile-wrapper {
+    width: min(140px, 40vw);
+    height: min(140px, 40vw);
+    width: min(140px, 40svw);
+    height: min(140px, 40svw);
+  }
+
+  /* Project Cards Mobile Flexbox */
+  .project-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-image {
+    height: auto;
+    max-height: 35vh;
+    max-height: 35svh;
+    min-height: 180px;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--spacing-md);
+  }
+
+  .project-tile-technologies {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .project-tile-tech {
+    font-size: 0.6rem;
+  }
+
+  /* Miscellaneous Projects Mobile */
+  .misc-projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .misc-project-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .misc-project-card:has(.misc-project-images) {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .misc-project-image-wrapper {
+    padding-top: 75%;
+    /* Slightly taller aspect ratio for mobile */
+  }
+
+  /* Toolbox Mobile Flexbox */
+  .toolbox-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .tool-item {
+    width: calc(50% - var(--spacing-sm));
+    min-width: 120px;
+    max-width: 140px;
+    padding: var(--spacing-md);
+  }
+
+  .tool-icon {
+    font-size: 2rem;
+  }
+
+  .tool-name {
+    font-size: 0.75rem;
+  }
+
+  /* Footer Mobile */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .contact-buttons {
+    justify-content: center;
+  }
+
+  /* Section Spacing */
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Modal Mobile */
+  .modal-content {
+    width: 95%;
+    max-height: 85vh;
+    max-height: 85svh;
+    margin: var(--spacing-md);
+  }
+
+  .modal-body {
+    padding: var(--spacing-lg);
+  }
+
+  .modal-body img {
+    max-height: 30vh;
+    max-height: 30svh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ----- MEDIUM MOBILE (481px - 768px) ----- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .hero-title .mono {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2.5rem, 8svw, 4rem);
+  }
+
+  .hero-tagline-large {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    font-size: clamp(2rem, 6svw, 2.8rem);
+  }
+
+  /* Projects Grid - Single Column */
+  .grid.grid-cols-2,
+  .grid.grid-cols-3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .project-image {
+    height: auto;
+    max-height: 40vh;
+    max-height: 40svh;
+    min-height: 220px;
+  }
+
+  /* Misc Projects - 2 column on medium */
+  .misc-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    justify-items: center;
+  }
+
+  .misc-project-card,
+  .misc-project-card:has(.misc-project-images) {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* Toolbox - 3 columns */
+  .toolbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    justify-items: center;
+  }
+
+  .tool-item {
+    width: 100%;
+    max-width: 140px;
+  }
+}
+
+/* ----- TABLET (769px - 1024px) ----- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-image {
+    height: 250px;
+    max-height: 35vh;
+    max-height: 35svh;
+  }
+
+  /* Projects Grid - 2 columns */
+  .grid.grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Misc Projects - 3 columns */
+  .misc-projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .misc-project-card {
+    width: 180px;
+  }
+}
+
+/* ----- LANDSCAPE MOBILE ORIENTATION ----- */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .hero-profile-wrapper {
+    width: min(120px, 20vh);
+    height: min(120px, 20vh);
+    width: min(120px, 20svh);
+    height: min(120px, 20svh);
+  }
+
+  .hero-tagline-large {
+    font-size: clamp(1.5rem, 5vh, 2.5rem);
+    font-size: clamp(1.5rem, 5svh, 2.5rem);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .project-image {
+    max-height: 50vh;
+    max-height: 50svh;
+  }
+}
+
+/* ----- HIGH-DPI / RETINA DISPLAYS ----- */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+  .project-image,
+  .misc-project-image,
+  .hero-profile-photo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ----- TOUCH DEVICE ENHANCEMENTS ----- */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Remove hover effects for touch devices - show content by default */
+  .project-description,
+  .project-tech,
+  .project-content .btn {
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover .project-image {
+    transform: none;
+  }
+
+  /* Larger touch targets */
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    min-height: 48px;
+  }
+
+  .nav-links a {
+    padding: var(--spacing-sm);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tool-item {
+    padding: var(--spacing-lg);
+  }
+}
