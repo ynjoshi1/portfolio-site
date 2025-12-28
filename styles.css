@@ -1383,7 +1383,8 @@ p {
 }
 
 /* ----- VIEWPORT-BASED IMAGE SCALING ----- */
-/* Misc project images scale with viewport, project cards use fixed height */
+/* Using svh/svw with vh/vw fallbacks for broad compatibility */
+.project-image,
 .misc-project-image {
   /* Fallback for browsers without svh/svw support */
   max-height: 40vh;
@@ -1391,14 +1392,6 @@ p {
   max-height: 40svh;
   width: 100%;
   height: auto;
-  object-fit: cover;
-}
-
-/* Project images maintain consistent fixed height across cards */
-.project-image {
-  width: 100%;
-  height: 250px;
-  /* Consistent fixed height for all project cards */
   object-fit: cover;
 }
 
@@ -1471,8 +1464,10 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    height: 200px;
-    /* Consistent fixed height on small mobile */
+    height: auto;
+    max-height: 35vh;
+    max-height: 35svh;
+    min-height: 180px;
   }
 
   .project-content {
@@ -1604,8 +1599,10 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    height: 220px;
-    /* Consistent fixed height on medium mobile */
+    height: auto;
+    max-height: 40vh;
+    max-height: 40svh;
+    min-height: 220px;
   }
 
   /* Misc Projects - 2 column on medium */
@@ -1640,7 +1637,8 @@ img:not(.hero-profile-photo) {
 @media (min-width: 769px) and (max-width: 1024px) {
   .project-image {
     height: 250px;
-    /* Consistent fixed height on tablet */
+    max-height: 35vh;
+    max-height: 35svh;
   }
 
   /* Projects Grid - 2 columns */
@@ -1683,8 +1681,8 @@ img:not(.hero-profile-photo) {
   }
 
   .project-image {
-    height: 200px;
-    /* Consistent fixed height in landscape */
+    max-height: 50vh;
+    max-height: 50svh;
   }
 }
 
