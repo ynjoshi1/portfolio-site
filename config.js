@@ -34,7 +34,7 @@ const portfolioConfig = {
     social: {
         linkedin: "https://linkedin.com/in/yashnjoshi1",
         github: "https://github.com/ynjoshi1", // Add your GitHub username
-        resumePDF: "Yash Joshi Resume FA25.pdf" // Place your resume PDF in the same folder
+        resumePDF: "Yash Joshi Resume SP26.pdf" // Place your resume PDF in the same folder
     },
 
     // ========== PROJECTS ==========
