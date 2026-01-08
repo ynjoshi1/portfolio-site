@@ -9,7 +9,7 @@ const portfolioConfig = {
         name: "Yash Joshi",
         university: "Purdue University",
         tagline: "Learn. Design. Build.",
-        jobTitle: "First Year Mechanical Engineering Student",
+        jobTitle: "Mechanical Engineering Student",
         email: "yashnjoshi1@gmail.com",
         profilePhoto: "images/profile_pic.PNG" // Your professional headshot
     },
