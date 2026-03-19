@@ -553,10 +553,9 @@ function populateFooter(config) {
 
 
     // Update resume link
-    const resumeLinks = document.querySelectorAll('a[download]');
+    const resumeLinks = document.querySelectorAll('.resume-link');
     resumeLinks.forEach(link => {
         link.href = config.social.resumePDF;
-        link.download = config.social.resumePDF;
     });
 
     // Update copyright
