@@ -42,40 +42,40 @@ const portfolioConfig = {
     projects: [
         {
             title: "YASA Axial Flux Motor",
-            shortDescription: "In the process of designing and building a YASA axial flux motor from scratch to use in an EV go-kart for competition in the Purdue EV Grand Prix under the ASME Racing team.",
+            shortDescription: "Designing and manufacturing an experimental YASA Axial Flux motor with a 3000 RPM running speed for the Purdue ASME Racing team's EV Grand Prix entry.",
             image: "images/test motor  cad.jpg",
             galleryImages: [
                 "images/test motor  cad.jpg",
                 "images/YASA inspo pic.png"
             ],
-            technologies: ["FUSION360", "ANSYS", "MotorXP"],
+            technologies: ["AUTODESK FUSION", "MOTORXP", "3D PRINTING", "CNC MILLING"],
 
             // Modal content (detailed view)
-            overview: "Our goal is to be the first Purdue Grand Prix team to race with a fully custom motor and do so using a YASA Axial Flux motor design, which is known for its lightweight and compact yet high performance design.",
+            overview: "As a member of the ASME Racing Team, I am developing a custom YASA Axial Flux motor. This project involves complex electromagnetic design and structural simulation to achieve high performance in a compact form factor for electric vehicle competition.",
             highlights: [
-                { title: "Initial Research", description: "Worked with teammates to find the optimal stator and rotor specifications to meet power needs" },
-                { title: "Preliminary Design", description: "Used Fusion360 to create a test motor design and assemble a TLA" },
-                { title: "Performance Validation", description: "Ran simulations in Ansys Motor to validate performance viablitiy and adjust design accordingly" },
-                { title: "Next Steps", description: "Put together a 3D printed test motor and tune specifications before moving on to machining and final assembly" }
+                { title: "Design", description: "Utilized Autodesk Fusion and MotorXP to design the motor architecture, targeting a high-efficiency 3000 RPM running speed." },
+                { title: "Simulation", description: "Analyzed the motor mounting assembly within Fusion simulations to ensure structural stability and efficiency during high-speed operation." },
+                { title: "Manufacturing", description: "Produced motor components and assembly fixtures using FDM/Resin 3D printing and Fusion CAM-based 3-axis CNC milling." },
+                { title: "Validation", description: "Validating stator and rotor specifications through simulation before moving into final machining and assembly phases." }
             ]
         },
         {
             title: "Lunar Robot Gearbox Systems",
-            shortDescription: "Designing and prototyping gearbox mechanisms for Purdue Lunabotics' robot in the NASA Lunabotics competition.",
+            shortDescription: "Engineering high-efficiency drivetrain gearboxes for Purdue Lunabotics, optimized for weight reduction and rapid assembly for NASA competition.",
             image: "images/lunabotics rover pic.png",
             galleryImages: [
                 "images/IMG_6587.jpg",
                 "images/lunabotics rover pic.png",
                 "images/gearbox isometric.jpg"
             ],
-            technologies: ["SOLIDWORKS", "3D PRINTING"],
+            technologies: ["SOLIDWORKS", "AUTODESK FUSION (CAM)", "CNC MILLING", "WATERJET"],
 
-            overview: "The focus of this project is high efficiency and ease of assembly, meaning a large part of the design process was calculating the optimal gear ratios and testing numerous configurations before finalizing a layout.",
+            overview: "Working within the Drivetrain Sub-team, I focus on the mechanical design and manufacturing of gearbox systems that must withstand harsh lunar-simulated environments while adhering to strict weight constraints.",
             highlights: [
-                { title: "Initial Calculations", description: "Began by understanding our constraints and requirements before finding optimal values for performance" },
-                { title: "Design", description: "Used the determined 1.6:1 gear ratio and 2\" x 3\" box tube to create an initial design in Solidworks" },
-                { title: "Communication", description: "Put together a guide for gear box assembly to ensure fellow teammates are informed and validate the design before manufacturing" },
-                { title: "Next Steps", description: "Prepare for critical design review followed by manufacturing and final testing" }
+                { title: "Design", description: "Designed gearboxes and frame elements in Solidworks optimized for traversal efficiency and a 5+kg weight reduction goal." },
+                { title: "Optimization", description: "Reduced gearbox assembly time by 20% by creating thoughtful designs for frequently adjusted components and providing clear documentation." },
+                { title: "Manufacturing", description: "Developed CAM toolpaths for 3-axis CNC milling of aluminum components and waterjet cutting for plexiglass skid plates." },
+                { title: "Documentation", description: "Maintained detailed documentation and trade studies presented in design reviews to inform industry partners and club leadership." }
             ]
         },
         {
