@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll for navigation links
     initSmoothScroll();
 
+
+
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -595,6 +597,9 @@ function showToast(message) {
         }, 300);
     }, 3000);
 }
+
+
+
 
 
 // ========== SCROLL ANIMATIONS ==========
