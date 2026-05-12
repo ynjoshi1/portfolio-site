@@ -187,16 +187,15 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--safety-orange);
+  background-color: transparent;
   border-color: var(--safety-orange);
-  color: var(--slate-900);
+  color: var(--safety-orange);
 }
 
 .btn-primary:hover {
-  background-color: var(--safety-orange-light);
-  border-color: var(--safety-orange-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+  background-color: var(--safety-orange);
+  border-color: var(--safety-orange);
+  color: var(--slate-900);
 }
 
 .btn-outline {

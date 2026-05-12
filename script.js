@@ -637,6 +637,16 @@ function initSmoothScroll() {
                 return;
             }
 
+            // Special case for hero section to bypass parallax transform skew
+            if (targetId === '#hero') {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+                return;
+            }
+
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
