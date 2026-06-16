@@ -172,9 +172,14 @@ function populateProjects(projects) {
             `<span class="project-tile-tech">${tech}</span>`
         ).join('');
 
+        const statusBadge = project.inProgress
+            ? `<div class="project-status-badge">In Progress</div>`
+            : '';
+
         projectCard.innerHTML = `
       <img src="${project.image}" alt="${project.title}" class="project-image">
       <div class="project-content">
+        ${statusBadge}
         <h3 class="project-title">${project.title}</h3>
         <div class="project-tile-technologies">${techTags}</div>
         <p class="project-description">${project.shortDescription}</p>
@@ -233,11 +238,17 @@ function createProjectModal(project, index) {
     const modal = document.createElement('div');
     modal.id = `modal-${index}`;
     modal.className = 'modal';
+
+    const statusBadge = project.inProgress
+        ? `<div style="display: flex; justify-content: center; margin-top: -0.5rem; margin-bottom: 1.5rem;"><span class="project-status-badge">In Progress</span></div>`
+        : '';
+
     modal.innerHTML = `
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal(${index})" aria-label="Close modal">&times;</button>
       <div class="modal-body" style="line-height: 2;">
-        <h2 style="text-align: center;">${project.title}</h2>
+        <h2 style="text-align: center; margin-bottom: 0.5rem;">${project.title}</h2>
+        ${statusBadge}
         <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem; margin: 1.5rem 0;">
           ${galleryHTML}
         </div>

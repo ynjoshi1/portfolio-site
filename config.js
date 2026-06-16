@@ -39,9 +39,13 @@ const portfolioConfig = {
 
     // ========== PROJECTS ==========
     // Add or remove projects as needed. Each project should have these fields:
+    // - title: Project name
+    // - inProgress: Optional boolean to display an "In Progress" badge (e.g. true)
+    // - shortDescription: Brief summary displayed on the card
     projects: [
         {
             title: "YASA Axial Flux Motor",
+            inProgress: false,
             shortDescription: "Designing and manufacturing an experimental YASA Axial Flux motor with a 3000 RPM running speed for the Purdue ASME Racing team's EV Grand Prix entry.",
             image: "images/test motor  cad.jpg",
             galleryImages: [
@@ -61,6 +65,7 @@ const portfolioConfig = {
         },
         {
             title: "Lunar Robot Gearbox Systems",
+            inProgress: false,
             shortDescription: "Engineering high-efficiency drivetrain gearboxes for Purdue Lunabotics, optimized for weight reduction and rapid assembly for NASA competition.",
             image: "images/lunabotics rover pic.png",
             galleryImages: [
@@ -80,6 +85,7 @@ const portfolioConfig = {
         },
         {
             title: "Modified Elbow Air Engine",
+            inProgress: false,
             shortDescription: "Used Siemens NX to model and create industry level engineering drawings of a modified elbow air engine.",
             image: "images/Lab_4_Exploded_Drawing_YNJ.png",
             galleryImages: [
@@ -94,6 +100,25 @@ const portfolioConfig = {
                 { title: "Modeling", description: "Used a top-down modeling approach to ensure clarity and functionality with interchangeable parts" },
                 { title: "Drawing", description: "Followed ASME Y14.5 standards to create a full set of engineering drawings for the engine" },
                 { title: "Next Steps", description: "Would like to 3D print and assemble parts of this to test the fit and tolerance choices (and have some fun with an air engine)" }
+            ]
+        },
+        {
+            title: "Custom Electric Skateboard",
+            inProgress: true,
+            shortDescription: "Designing and building a custom electric skateboard deck that blends 3D-printed plastics with a steel skeleton for the ultimate strength-to-weight ratio.",
+            image: "images/Lab_4_Exploded_Drawing_YNJ.png",
+            galleryImages: [
+                "images/elbow engine drawing.jpg",
+                "images/Lab_4_Exploded_Drawing_YNJ.png"
+            ],
+            technologies: ["AUTODESK FUSION", "ANSYS MECHANICAL", "3D PRINTING"],
+
+            overview: "Working to create a board that is lightweight and able to handle the dynamic stress of riding.",
+            highlights: [
+                { title: "Design", description: "Modeled the multi-material deck in Fusion, combining a steel support frame with a custom 3D-printed shell." },
+                { title: "Optimization", description: "Cut down weight by modeling a structural honeycomb pattern that maintained board stiffness without sacrificing durability." },
+                { title: "Manufacturing", description: "Navigated thermal shrinkage and print orientation to ensure tight tolerances for the structural epoxy joints." },
+                { title: "Analysis", description: "Ran finite element analysis (FEA) and beam calculations to verify the board wouldn't break under dynamic riding loads." }
             ]
         }
     ],
