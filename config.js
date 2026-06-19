@@ -47,10 +47,10 @@ const portfolioConfig = {
             title: "Custom Electric Skateboard",
             inProgress: true,
             shortDescription: "Designing and building a custom electric skateboard deck that blends 3D-printed plastics with a steel skeleton for the ultimate strength-to-weight ratio.",
-            image: "images/Assembly_Isometric.png",
+            image: "images/Assembly_Isometric.jpg",
             galleryImages: [
                 "images/Deck_Top_View.jpg",
-                "images/Assembly Isometric.png"
+                "images/Assembly_Isometric.jpg"
             ],
             technologies: ["AUTODESK FUSION", "ANSYS MECHANICAL", "3D PRINTING"],
 
